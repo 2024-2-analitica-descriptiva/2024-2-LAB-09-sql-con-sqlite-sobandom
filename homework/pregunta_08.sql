@@ -41,3 +41,8 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT CAST(CAST(c23 AS DATESTAMP) AS CHAR) AS 'strftime(''%Y'', c23)', ROUND(avg(c21),2) 'avg(c21)'
+
+FROM tbl2
+GROUP BY CAST(c23 AS DATESTAMP)
+ORDER BY CAST(c23 AS DATESTAMP);
